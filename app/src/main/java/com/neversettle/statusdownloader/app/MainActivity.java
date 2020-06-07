@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
     public void replaceByInstagram() {
 
         Instagram instagram = new Instagram();
-        FragmentTransaction transaction = manager.beginTransaction();
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.container, instagram, "fragInstagram");
         transaction.addToBackStack("replaceByInstagram");
         transaction.commit();
@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (manager.getBackStackEntryCount() > 0) {
             manager.popBackStack("replaceByInstagram",POP_BACK_STACK_INCLUSIVE);
-         //   replaceByWhatsApp();
+        //    replaceByWhatsApp();
         } else {
             super.onBackPressed();
         }

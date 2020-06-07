@@ -18,12 +18,14 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.core.app.ActivityOptionsCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.neversettle.statusdownloader.R;
+import com.neversettle.statusdownloader.app.showVideoItems;
 
 import org.apache.commons.io.comparator.LastModifiedFileComparator;
 
@@ -172,12 +174,12 @@ public class SavedVideoFragment extends Fragment {
             holder.VidV.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-//                    Intent intent = new Intent(getContext(), showVideoItems.class);
-//                    intent.putExtra("dataKey", iri.toString());
-//                    intent.setFlags(Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
-//                    ActivityOptionsCompat activityOptionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(getActivity(), holder.VidV, "videoTrans1");
-//
-//                    startActivity(intent);
+                    Intent intent = new Intent(getContext(), showVideoItems.class);
+                    intent.putExtra("dataKey", iri.toString());
+                    intent.setFlags(Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
+                    ActivityOptionsCompat activityOptionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(getActivity(), holder.VidV, "videoTrans1");
+
+                    startActivity(intent);
                 }
             });
 

@@ -18,7 +18,7 @@
 
         <include
             android:id="@+id/saved_gallery_toolbar"
-            layout="@layout/toolbar" />
+            layout="@layout/app_tool_bar" />
 
         <com.neversettle.statusdownloader.utils.ListenableTabLayout
             android:id="@+id/saved_gallery_tabs"

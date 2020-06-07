@@ -91,8 +91,8 @@ public class Whatsapp extends Fragment {
                             } else if (index == 1) {
                                 Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
                                 sharingIntent.setType("text/plain");
-                                String shareBody = "Download WhatsApp Status Saver using https://play.google.com/store/apps/details?id=com.tripleastudio.whatsappstatussaver";
-                                sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Songs of Zion ");
+                                String shareBody = "Download  Status Downloader using https://play.google.com/store/apps/details?id=com.neversettle.statusdownloader";
+                                sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "NeverSettle Studio ");
                                 sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
                                 startActivity(Intent.createChooser(sharingIntent, "Share via"));
                             } else if (index == 2) {

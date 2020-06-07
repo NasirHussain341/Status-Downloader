@@ -23,6 +23,8 @@
         <activity android:name=".app.PicDetail"/>
         <activity android:name=".app.VideoDetailActivity" />
         <activity android:name=".app.SavedGallery"/>
+        <activity android:name=".app.showVideoItems"/>
+        <activity android:name=".app.ShowPictureItems"/>
     </application>
 
 </manifest>

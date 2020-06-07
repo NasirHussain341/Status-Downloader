@@ -15,11 +15,13 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.core.app.ActivityOptionsCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.neversettle.statusdownloader.R;
+import com.neversettle.statusdownloader.app.ShowPictureItems;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.NetworkPolicy;
 import com.squareup.picasso.Picasso;
@@ -173,11 +175,11 @@ public class SavedPictureFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-//                Intent intent = new Intent(getContext(), ShowPictureItems.class);
-//                intent.putExtra("pos", "" + getAdapterPosition());
-//                intent.setFlags(Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
-//                ActivityOptionsCompat activityOptionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(Objects.requireNonNull(getActivity()), imgV, "imageViewTrans1");
-//                Objects.requireNonNull(getContext()).startActivity(intent, activityOptionsCompat.toBundle());
+                Intent intent = new Intent(getContext(), ShowPictureItems.class);
+                intent.putExtra("pos", "" + getAdapterPosition());
+                intent.setFlags(Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
+                ActivityOptionsCompat activityOptionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(getActivity(), imgV, "imageViewTrans1");
+               getContext().startActivity(intent, activityOptionsCompat.toBundle());
             }
 
 
